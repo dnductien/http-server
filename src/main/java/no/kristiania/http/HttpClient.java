@@ -5,12 +5,12 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HTTPClient {
+public class HttpClient {
     private final int statusCode;
     private final Map<String, String> headerFields = new HashMap<>();
     private String messageBody;
 
-    public HTTPClient(String host, int port, String requestTarget) throws IOException {
+    public HttpClient(String host, int port, String requestTarget) throws IOException {
         Socket socket = new Socket(host, port);
 
         String clientRequest =
